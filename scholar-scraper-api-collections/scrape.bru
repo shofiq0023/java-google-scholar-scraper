@@ -4,8 +4,18 @@ meta {
   seq: 2
 }
 
-get {
-  url: 
-  body: none
+post {
+  url: http://localhost:8090/api/v1/scraper/scrape
+  body: json
   auth: none
+}
+
+body:json {
+  {
+    "keywords": [
+      "g2c"
+    ],
+    "yearSince": "2021",
+    "page": 10
+  }
 }
